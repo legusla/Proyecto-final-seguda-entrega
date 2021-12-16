@@ -1,6 +1,5 @@
 const knex = require('knex');
 
-
 class Contenedor {
   constructor(config, table) {
     this.table = table;

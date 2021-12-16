@@ -6,21 +6,21 @@ const knexSQLite = require('knex')(sqliteOptions);
 knexMySQL.schema.createTable('products', (table) => {
   table.increments('id');
   table.string('name');
-  table.integer('description');
+  table.string('description');
   table.integer('code');
-  table.integer('photo');
-  table.integer('price');
+  table.string('photo');
+  table.string('price');
   table.integer('stock');
 })
   .then(() => console.log('Table created'))
   .catch((error) => { console.error(error); throw error; })
   .finally(() => knexMySQL.destroy())
 
-knexSQLite.schema.createTable('messages', (table) => {
-    table.increments('id');
-    table.string('name');
-    table.string('messages');
-})
-  .then(() => console.log('Table created'))
-  .catch((error) => { console.error(error); throw error; })
-  .finally(() => knexSQLite.destroy())  
+//knexSQLite.schema.createTable('messages', (table) => { 
+//    table.increments('id');
+//    table.string('name');
+//    table.string('messages');
+//})
+//  .then(() => console.log('Table created'))
+//  .catch((error) => { console.error(error); throw error; })
+//  .finally(() => knexSQLite.destroy())  

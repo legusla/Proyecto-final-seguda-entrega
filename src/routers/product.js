@@ -47,3 +47,4 @@ productsRouter.delete('/:id', isAdmin, async (req, res) => {
 
 module.exports = productsRouter;
 
+

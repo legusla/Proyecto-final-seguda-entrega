@@ -1,6 +1,7 @@
 const Contenedor = require('../../Contenedor');
+const { options } = require('./databases');
 
-const productsContenedor = new Contenedor('./data/products.json');
+const productsContenedor = new Contenedor(options, 'products');
 
 //muestra todos los productos
 const getAllProducts = async () => {

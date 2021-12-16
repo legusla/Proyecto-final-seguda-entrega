@@ -1,12 +1,10 @@
-require('dotenv').config();
 const { Server: HttpServer } = require('http')
 const { Server: SocketServer } = require('socket.io')
-
 const express = require('express');
 
-const cartRouter = require('../routers/cart');
-const productRouter = require('../routers/products');
-const { saveMessage, getMessages } = require('../models/messages');
+const cartRouter = require('./routers/cart');
+const productRouter = require('./routers/product');
+const { saveMessage, getMessages } = require('./models/messages');
 
 const app = express();
 const httpServer = new HttpServer(app)
